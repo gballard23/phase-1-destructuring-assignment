@@ -1,7 +1,16 @@
+//destructures sounds, colors, and names to assign to a specific animal
 const farmAnimals = 'cow horse sheep pig chicken';
+const [moo, neigh, baa, oink, cluck]  = farmAnimals.split(' ');
+const [bessie,, dolly, babe, little]  = farmAnimals.split(' ');
+const[blackAndWhite,, black, pink] = farmAnimals.split(' ');
 
+//destructues colors to reasign for rainbow, initials, and indigo
 const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+const [red, orange, yellow, green, blue, indigo, violet] = colors;
+const [r, o, y, g, b, , v] = colors;
+const [,,,,, indg] = colors;
 
+//destructures object for each key
 const muppet = {
   muppetName: 'Miss Piggy',
   color: 'pink',
@@ -9,6 +18,7 @@ const muppet = {
   job: 'Cast member of The Muppet Show',
   partner: 'Kermit'
 };
+const {muppetName, color, song, job, partner} = muppet;
 
 const nestedMuppet = {
   nestedName: 'Kermit',
@@ -24,6 +34,9 @@ const nestedMuppet = {
   nestedJob: 'Host of The Muppet Show',
   nestedPartner: 'Miss Piggy'
 };
+
+const {nestedJob, nestedPartner} = nestedMuppet;
+const {song2, song4} = nestedMuppet.album.theMuppetMovie;
 
 // Strings
 
